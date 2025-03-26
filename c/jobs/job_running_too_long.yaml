@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: busy
+spec:
+  activeDeadlineSeconds: 15
+  template:
+    metadata:
+    spec:
+      containers:
+      - args:
+        - /bin/sh
+        - -c 
+        - echo hello;sleep 20s;echo world;
+        image: busybox
+        name: busy
+        resources: {}
+      restartPolicy: OnFailure
+status: {}
