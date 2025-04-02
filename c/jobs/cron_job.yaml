@@ -9,6 +9,7 @@ spec:
       creationTimestamp: null
       name: busybox
     spec:
+      activeDeadlineSeconds: 17
       template:
         metadata:
           creationTimestamp: null
